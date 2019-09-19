@@ -1,0 +1,47 @@
+---
+title: "STA426 : Exercise1-Part b"
+author: "Papadopoulou Iliana"
+date: "September 18, 2019"
+output: html_document
+--- 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### **_Sample from a log-normal distribution_**
+
+```{r}
+set.seed(75)
+# generate 100 lognormal samples
+n <- 100
+data <- rlnorm(n, meanlog = 1, sdlog = .25)
+```
+
+#### **_Devise a vector of histogram breaks_**
+```{r}
+breaks <- seq(0,max(data),length=50)
+```
+
+#### **_Devise a histogram with the data_**
+```{r}
+hst <- hist(data, breaks=breaks)
+```  
+
+#### **_Devise a histogram with the data on log scale _**
+```{r}
+hst <- hist(log(data), breaks=breaks)
+```  
+
+#### **_Plot the log-normal distribution _**
+```{r}
+plot(density(data),col="steelblue",lty=1)
+```
+
+#### **_Report mean and variance of the sample_**
+```{r}
+mean <-mean(data)
+print(mean)
+variance<-var(data)
+print(variance)
+```
