@@ -16,6 +16,7 @@ set.seed(75)
 # generate 100 lognormal samples
 n <- 100
 data <- rlnorm(n, meanlog = 1, sdlog = .25)
+print(data)
 ```
 
 #### **_Devise a vector of histogram breaks_**
@@ -25,12 +26,12 @@ breaks <- seq(0,max(data),length=50)
 
 #### **_Devise a histogram with the data_**
 ```{r}
-hst <- hist(data, breaks=breaks)
+hst <- hist(data, breaks=breaks,col = "firebrick1")
 ```  
 
 #### **_Devise a histogram with the data on log scale _**
 ```{r}
-hst <- hist(log(data), breaks=breaks)
+hst <- hist(log(data), breaks=breaks,col = "firebrick1")
 ```  
 
 #### **_Plot the log-normal distribution _**
@@ -45,3 +46,5 @@ print(mean)
 variance<-var(data)
 print(variance)
 ```
+
+The mean of the sample is `r mean` and its variance is `r variance`. 
