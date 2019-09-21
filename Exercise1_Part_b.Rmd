@@ -1,7 +1,7 @@
 ---
 title: "STA426 : Exercise1-Part b"
 author: "Papadopoulou Iliana"
-date: "September 19, 2019"
+date: "September 21, 2019"
 output: html_document
 --- 
 
